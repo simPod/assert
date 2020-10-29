@@ -39,18 +39,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert string $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function string($value, $message = '')
     {
         if (!\is_string($value)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected a string. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : \sprintf(
+                        $message ?: 'Expected a string. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -58,8 +62,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert non-empty-string $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -73,18 +77,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert int $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function integer($value, $message = '')
     {
         if (!\is_int($value)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected an integer. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected an integer. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -92,18 +100,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert numeric $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function integerish($value, $message = '')
     {
         if (!\is_numeric($value) || $value != (int) $value) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected an integerish value. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected an integerish value. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -111,18 +123,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert float $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function float($value, $message = '')
     {
         if (!\is_float($value)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected a float. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected a float. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -130,18 +146,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert numeric $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function numeric($value, $message = '')
     {
         if (!\is_numeric($value)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected a numeric. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected a numeric. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -149,8 +169,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert int $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -168,18 +188,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert bool $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function boolean($value, $message = '')
     {
         if (!\is_bool($value)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected a boolean. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected a boolean. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -187,18 +211,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert scalar $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function scalar($value, $message = '')
     {
         if (!\is_scalar($value)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected a scalar. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected a scalar. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -206,18 +234,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert object $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function object($value, $message = '')
     {
         if (!\is_object($value)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected an object. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected an object. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -234,10 +266,14 @@ class Assert
     public static function resource($value, $type = null, $message = '')
     {
         if (!\is_resource($value)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected a resource. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected a resource. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
 
         if ($type && $type !== \get_resource_type($value)) {
@@ -253,18 +289,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert callable $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function isCallable($value, $message = '')
     {
         if (!\is_callable($value)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected a callable. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected a callable. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -272,18 +312,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert array $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function isArray($value, $message = '')
     {
         if (!\is_array($value)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected an array. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected an array. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -293,8 +337,8 @@ class Assert
      *
      * @deprecated use "isIterable" or "isInstanceOf" instead
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -309,10 +353,14 @@ class Assert
         );
 
         if (!\is_array($value) && !($value instanceof Traversable)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected a traversable. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected a traversable. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -320,18 +368,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert array|ArrayAccess $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function isArrayAccessible($value, $message = '')
     {
         if (!\is_array($value) && !($value instanceof ArrayAccess)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected an array accessible. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected an array accessible. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -339,8 +391,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert countable $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -352,10 +404,14 @@ class Assert
             && !($value instanceof ResourceBundle)
             && !($value instanceof SimpleXMLElement)
         ) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected a countable. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected a countable. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -363,18 +419,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert iterable $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function isIterable($value, $message = '')
     {
         if (!\is_array($value) && !($value instanceof Traversable)) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected an iterable. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected an iterable. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -445,7 +505,7 @@ class Assert
         static::reportInvalidArgument(\sprintf(
             $message ?: 'Expected an instance of any of %2$s. Got: %s',
             static::typeToString($value),
-            \implode(', ', \array_map(array('static', 'valueToString'), $classes))
+            \implode(', ', \array_map(['static', 'valueToString'], $classes))
         ));
     }
 
@@ -523,7 +583,7 @@ class Assert
         static::reportInvalidArgument(sprintf(
             $message ?: 'Expected an any of instance of this class or to this class among his parents other than %2$s. Got: %s',
             static::typeToString($value),
-            \implode(', ', \array_map(array('static', 'valueToString'), $classes))
+            \implode(', ', \array_map(['static', 'valueToString'], $classes))
         ));
     }
 
@@ -531,8 +591,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert empty $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -550,8 +610,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert !empty $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -569,8 +629,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert null $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -588,8 +648,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert !null $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -606,8 +666,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert true $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -625,8 +685,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert false $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -644,8 +704,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert !false $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -659,8 +719,8 @@ class Assert
     }
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -675,8 +735,8 @@ class Assert
     }
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -691,8 +751,8 @@ class Assert
     }
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -707,8 +767,8 @@ class Assert
     }
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -725,8 +785,7 @@ class Assert
     /**
      * Does non strict comparisons on the items, so ['3', 3] will not pass the assertion.
      *
-     * @param array  $values
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -747,9 +806,9 @@ class Assert
     }
 
     /**
-     * @param mixed  $value
+     * @param mixed                    $value
      * @param mixed  $expect
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -765,9 +824,9 @@ class Assert
     }
 
     /**
-     * @param mixed  $value
+     * @param mixed                    $value
      * @param mixed  $expect
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -784,9 +843,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
+     * @param mixed                    $value
      * @param mixed  $expect
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -804,9 +863,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
+     * @param mixed                    $value
      * @param mixed  $expect
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -823,9 +882,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -843,9 +902,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -863,9 +922,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -883,9 +942,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -905,10 +964,10 @@ class Assert
      *
      * @psalm-pure
      *
-     * @param mixed  $value
+     * @param mixed                    $value
      * @param mixed  $min
      * @param mixed  $max
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -929,9 +988,9 @@ class Assert
      *
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param array  $values
-     * @param string $message
+     * @param mixed                    $value
+     * @param array                    $values
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -945,9 +1004,9 @@ class Assert
      *
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param array  $values
-     * @param string $message
+     * @param mixed                    $value
+     * @param array                    $values
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -965,9 +1024,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param string $value
-     * @param string $subString
-     * @param string $message
+     * @param string                   $value
+     * @param string                   $subString
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -985,9 +1044,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param string $value
-     * @param string $subString
-     * @param string $message
+     * @param string                   $value
+     * @param string                   $subString
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1005,8 +1064,8 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param string $value
-     * @param string $message
+     * @param string                   $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1023,9 +1082,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param string $value
-     * @param string $prefix
-     * @param string $message
+     * @param string                   $value
+     * @param string                   $prefix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1043,9 +1102,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param string $value
-     * @param string $prefix
-     * @param string $message
+     * @param string                   $value
+     * @param string                   $prefix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1063,8 +1122,8 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1092,9 +1151,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param string $value
-     * @param string $suffix
-     * @param string $message
+     * @param string                   $value
+     * @param string                   $suffix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1112,9 +1171,9 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param string $value
-     * @param string $suffix
-     * @param string $message
+     * @param string                   $value
+     * @param string                   $suffix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1134,7 +1193,7 @@ class Assert
      *
      * @param string $value
      * @param string $pattern
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1153,7 +1212,7 @@ class Assert
      *
      * @param string $value
      * @param string $pattern
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1172,8 +1231,8 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1192,8 +1251,8 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1217,8 +1276,8 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param string $value
-     * @param string $message
+     * @param string                   $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1240,8 +1299,8 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param string $value
-     * @param string $message
+     * @param string                   $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1264,8 +1323,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert lowercase-string $value
      *
-     * @param string $value
-     * @param string $message
+     * @param string                   $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1288,8 +1347,8 @@ class Assert
      * @psalm-pure
      * @psalm-assert !lowercase-string $value
      *
-     * @param string $value
-     * @param string $message
+     * @param string                   $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1313,7 +1372,7 @@ class Assert
      *
      * @param string $value
      * @param int    $length
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1401,8 +1460,8 @@ class Assert
     /**
      * Will also pass if $value is a directory, use Assert::file() instead if you need to be sure it is a file.
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1419,8 +1478,8 @@ class Assert
     }
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1437,8 +1496,8 @@ class Assert
     }
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1455,8 +1514,8 @@ class Assert
     }
 
     /**
-     * @param string $value
-     * @param string $message
+     * @param string                   $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1471,8 +1530,8 @@ class Assert
     }
 
     /**
-     * @param string $value
-     * @param string $message
+     * @param string                   $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1489,8 +1548,8 @@ class Assert
     /**
      * @psalm-assert class-string $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1530,8 +1589,8 @@ class Assert
     /**
      * @psalm-assert class-string $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1551,9 +1610,9 @@ class Assert
      * @psalm-param class-string<ExpectedType> $interface
      * @psalm-assert class-string<ExpectedType> $value
      *
-     * @param mixed  $value
+     * @param mixed                    $value
      * @param mixed  $interface
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1692,18 +1751,22 @@ class Assert
      * @psalm-pure
      * @psalm-assert array-key $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function validArrayKey($value, $message = '')
     {
         if (!(\is_int($value) || \is_string($value))) {
-            static::reportInvalidArgument(\sprintf(
-                $message ?: 'Expected string or integer. Got: %s',
-                static::typeToString($value)
-            ));
+            static::reportInvalidArgument(
+                is_callable($message)
+                    ? $message()
+                    : sprintf(
+                        $message ?: 'Expected string or integer. Got: %s',
+                        static::typeToString($value)
+                    )
+            );
         }
     }
 
@@ -1798,7 +1861,7 @@ class Assert
      * @psalm-assert list $array
      *
      * @param mixed  $array
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1816,7 +1879,7 @@ class Assert
      * @psalm-assert non-empty-list $array
      *
      * @param mixed  $array
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1833,7 +1896,7 @@ class Assert
      * @psalm-assert array<string, T> $array
      *
      * @param mixed  $array
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1857,7 +1920,7 @@ class Assert
      * @psalm-assert !empty $array
      *
      * @param mixed  $array
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1870,8 +1933,8 @@ class Assert
     /**
      * @psalm-pure
      *
-     * @param string $value
-     * @param string $message
+     * @param string                   $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -2031,7 +2094,7 @@ class Assert
     }
 
     /**
-     * @param string $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      *
@@ -2039,6 +2102,10 @@ class Assert
      */
     protected static function reportInvalidArgument($message)
     {
+        if (is_callable($message)) {
+            $message = $message();
+        }
+
         throw new InvalidArgumentException($message);
     }
 

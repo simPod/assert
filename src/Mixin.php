@@ -18,8 +18,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|string $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -29,8 +29,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<string> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -40,8 +40,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|non-empty-string $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -51,8 +51,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<non-empty-string> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -62,8 +62,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|int $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -73,8 +73,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<int> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -84,8 +84,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|numeric $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -95,8 +95,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<numeric> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -106,8 +106,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|float $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -117,8 +117,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<float> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -128,8 +128,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|numeric $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -139,8 +139,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<numeric> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -150,8 +150,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|int $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -161,8 +161,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<int> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -172,8 +172,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|bool $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -183,8 +183,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<bool> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -194,8 +194,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|scalar $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -205,8 +205,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<scalar> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -216,8 +216,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|object $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -227,8 +227,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<object> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -262,8 +262,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|callable $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -273,8 +273,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<callable> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -284,8 +284,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|array $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -295,8 +295,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<array> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -308,8 +308,8 @@ interface Mixin
      *
      * @deprecated use "isIterable" or "isInstanceOf" instead
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -321,8 +321,8 @@ interface Mixin
      *
      * @deprecated use "isIterable" or "isInstanceOf" instead
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -332,8 +332,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|array|ArrayAccess $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -343,8 +343,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<array|ArrayAccess> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -354,8 +354,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|countable $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -365,8 +365,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<countable> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -376,8 +376,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|iterable $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -387,8 +387,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<iterable> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -554,8 +554,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert empty $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -565,8 +565,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<empty> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -575,8 +575,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -585,8 +585,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -596,8 +596,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<null> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -606,8 +606,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -617,8 +617,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|true $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -628,8 +628,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<true> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -639,8 +639,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|false $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -650,8 +650,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<false> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -660,8 +660,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -670,124 +670,122 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allNotFalse($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrIp($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allIp($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrIpv4($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allIpv4($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrIpv6($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allIpv6($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrEmail($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allEmail($value, $message = '');
 
     /**
-     * @param null|array $values
-     * @param string     $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrUniqueValues($values, $message = '');
 
     /**
-     * @param iterable<array> $values
-     * @param string          $message
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allUniqueValues($values, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param mixed  $expect
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $expect
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrEq($value, $expect, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param mixed  $expect
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $expect
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allEq($value, $expect, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param mixed  $expect
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $expect
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrNotEq($value, $expect, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param mixed  $expect
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $expect
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -796,9 +794,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $expect
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $expect
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -807,9 +805,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $expect
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $expect
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -818,9 +816,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $expect
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $expect
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -829,9 +827,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $expect
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $expect
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -840,9 +838,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -851,9 +849,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -862,9 +860,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -873,9 +871,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -884,9 +882,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -895,9 +893,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -906,9 +904,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -917,9 +915,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $limit
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $limit
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -928,10 +926,10 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $min
-     * @param mixed  $max
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $min
+     * @param mixed                    $max
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -940,10 +938,10 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param mixed  $min
-     * @param mixed  $max
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $min
+     * @param mixed                    $max
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -952,9 +950,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param array  $values
-     * @param string $message
+     * @param mixed                    $value
+     * @param array                    $values
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -963,9 +961,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param array  $values
-     * @param string $message
+     * @param mixed                    $value
+     * @param array                    $values
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -974,9 +972,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param array  $values
-     * @param string $message
+     * @param mixed                    $value
+     * @param array                    $values
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -985,9 +983,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param array  $values
-     * @param string $message
+     * @param mixed                    $value
+     * @param array                    $values
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -996,9 +994,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $subString
-     * @param string      $message
+     * @param null|string              $value
+     * @param string                   $subString
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1007,9 +1005,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $subString
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string                   $subString
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1018,9 +1016,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $subString
-     * @param string      $message
+     * @param null|string              $value
+     * @param string                   $subString
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1029,9 +1027,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $subString
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string                   $subString
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1040,8 +1038,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $message
+     * @param null|string              $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1050,8 +1048,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1060,9 +1058,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $prefix
-     * @param string      $message
+     * @param null|string              $value
+     * @param string                   $prefix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1071,9 +1069,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $prefix
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string                   $prefix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1082,9 +1080,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $prefix
-     * @param string      $message
+     * @param null|string              $value
+     * @param string                   $prefix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1093,9 +1091,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $prefix
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string                   $prefix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1104,8 +1102,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1114,8 +1112,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1124,9 +1122,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $suffix
-     * @param string      $message
+     * @param null|string              $value
+     * @param string                   $suffix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1135,9 +1133,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $suffix
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string                   $suffix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1146,9 +1144,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $suffix
-     * @param string      $message
+     * @param null|string              $value
+     * @param string                   $suffix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1157,9 +1155,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $suffix
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string                   $suffix
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1168,9 +1166,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $pattern
-     * @param string      $message
+     * @param null|string              $value
+     * @param string                   $pattern
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1179,9 +1177,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $pattern
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string                   $pattern
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1190,9 +1188,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $pattern
-     * @param string      $message
+     * @param null|string              $value
+     * @param string                   $pattern
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1201,9 +1199,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $pattern
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string                   $pattern
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1212,8 +1210,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1222,8 +1220,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1232,8 +1230,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1242,8 +1240,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1252,8 +1250,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $message
+     * @param null|string              $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1262,8 +1260,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1272,8 +1270,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $message
+     * @param null|string              $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1282,8 +1280,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1293,8 +1291,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|lowercase-string $value
      *
-     * @param null|string $value
-     * @param string      $message
+     * @param null|string              $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1304,8 +1302,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<lowercase-string> $value
      *
-     * @param iterable<string> $value
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1314,8 +1312,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $message
+     * @param null|string              $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1324,8 +1322,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1334,9 +1332,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param int         $length
-     * @param string      $message
+     * @param null|string              $value
+     * @param int                      $length
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1345,9 +1343,9 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param int              $length
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param int                      $length
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1422,80 +1420,80 @@ interface Mixin
     public static function allLengthBetween($value, $min, $max, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrFileExists($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allFileExists($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrFile($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allFile($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrDirectory($value, $message = '');
 
     /**
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allDirectory($value, $message = '');
 
     /**
-     * @param null|string $value
-     * @param string      $message
+     * @param null|string              $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrReadable($value, $message = '');
 
     /**
-     * @param iterable<string> $value
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function allReadable($value, $message = '');
 
     /**
-     * @param null|string $value
-     * @param string      $message
+     * @param null|string              $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
     public static function nullOrWritable($value, $message = '');
 
     /**
-     * @param iterable<string> $value
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1504,8 +1502,8 @@ interface Mixin
     /**
      * @psalm-assert null|class-string $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1514,8 +1512,8 @@ interface Mixin
     /**
      * @psalm-assert iterable<class-string> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1552,8 +1550,8 @@ interface Mixin
     /**
      * @psalm-assert null|class-string $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1562,8 +1560,8 @@ interface Mixin
     /**
      * @psalm-assert iterable<class-string> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1575,9 +1573,9 @@ interface Mixin
      * @psalm-param class-string<ExpectedType> $interface
      * @psalm-assert null|class-string<ExpectedType> $value
      *
-     * @param mixed  $value
-     * @param mixed  $interface
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $interface
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1589,9 +1587,9 @@ interface Mixin
      * @psalm-param class-string<ExpectedType> $interface
      * @psalm-assert iterable<class-string<ExpectedType>> $value
      *
-     * @param mixed  $value
-     * @param mixed  $interface
-     * @param string $message
+     * @param mixed                    $value
+     * @param mixed                    $interface
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1741,8 +1739,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|array-key $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1752,8 +1750,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<array-key> $value
      *
-     * @param mixed  $value
-     * @param string $message
+     * @param mixed                    $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1837,8 +1835,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|list $array
      *
-     * @param mixed  $array
-     * @param string $message
+     * @param mixed                    $array
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1848,8 +1846,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<list> $array
      *
-     * @param mixed  $array
-     * @param string $message
+     * @param mixed                    $array
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1859,8 +1857,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert null|non-empty-list $array
      *
-     * @param mixed  $array
-     * @param string $message
+     * @param mixed                    $array
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1870,8 +1868,8 @@ interface Mixin
      * @psalm-pure
      * @psalm-assert iterable<non-empty-list> $array
      *
-     * @param mixed  $array
-     * @param string $message
+     * @param mixed                    $array
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1883,8 +1881,8 @@ interface Mixin
      * @psalm-param null|mixed|array<T> $array
      * @psalm-assert null|array<string, T> $array
      *
-     * @param mixed  $array
-     * @param string $message
+     * @param mixed                    $array
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1896,8 +1894,8 @@ interface Mixin
      * @psalm-param iterable<mixed|array<T>> $array
      * @psalm-assert iterable<array<string, T>> $array
      *
-     * @param mixed  $array
-     * @param string $message
+     * @param mixed                    $array
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1908,8 +1906,8 @@ interface Mixin
      * @psalm-template T
      * @psalm-param null|mixed|array<T> $array
      *
-     * @param mixed  $array
-     * @param string $message
+     * @param mixed                    $array
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1920,8 +1918,8 @@ interface Mixin
      * @psalm-template T
      * @psalm-param iterable<mixed|array<T>> $array
      *
-     * @param mixed  $array
-     * @param string $message
+     * @param mixed                    $array
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1930,8 +1928,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param null|string $value
-     * @param string      $message
+     * @param null|string              $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
@@ -1940,8 +1938,8 @@ interface Mixin
     /**
      * @psalm-pure
      *
-     * @param iterable<string> $value
-     * @param string           $message
+     * @param iterable<string>         $value
+     * @param string|callable():string $message
      *
      * @throws InvalidArgumentException
      */
